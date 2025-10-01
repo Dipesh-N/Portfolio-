@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      colors : {
+        lightHover : "#fcf4ff",
+      },
+
       fontFamily: {
         outfit: ['var(--font-outfit)', 'sans-serif'],
         ovo: ['var(--font-ovo)', 'serif'],

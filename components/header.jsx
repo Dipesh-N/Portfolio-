@@ -16,7 +16,7 @@ const Header = () => {
         />
       </div>
 
-      <h3 className='flex items-center gap-2 text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300'>
+      <h3 className='flex items-center gap-2 text-xl md:text-2xl font-medium'>
         Hello, I am Dipesh Nihure 
         <Image  
           src={assets.hand_icon} 
@@ -26,10 +26,10 @@ const Header = () => {
       </h3>
 
       <h1 className='text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-teal-400 dark:from-blue-400 dark:to-teal-300 text-transparent bg-clip-text'>
-        Web Developer
+         Developer
       </h1>
 
-      <p className='max-w-2xl text-lg text-gray-500 dark:text-gray-400 leading-relaxed'>
+      <p className='max-w-2xl text-lg leading-relaxed'>
         I am a passionate developer and a dedicated student, currently exploring the latest web technologies to build beautiful and functional applications.
       </p>
 

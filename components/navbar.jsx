@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -30,7 +29,7 @@ const Navbar = () => {
             </div>
 
             {/* Main Navigation Bar */}
-            <nav className="ml-5 mr-5 md:mr-20 mt-10 justify-between flex items-center">
+            <nav className="fixed top-0 left-0 right-0 ml-5 mr-5 md:mr-20 mt-10 justify-between flex items-center z-30">
                 <Link href="/">
                     <Image src={assets.logo} alt='logo image' className="w-28 cursor-pointer mr-10" />
                 </Link>
@@ -38,10 +37,10 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex items-center gap-6 rounded-full px-5 py-4 bg-white shadow-sm bg-opacity-80 backdrop-blur-sm">
                     <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About me</Link></li>
-                    <li><Link href="/services">Services</Link></li>
-                    <li><Link href="/work">Work</Link></li>
-                    <li><Link href="/contact">Contact me</Link></li>
+                    <li><Link href="/about">About</Link></li>
+                    <li><Link href="/services">Skills</Link></li>
+                    <li><Link href="/work">Project</Link></li>
+                    <li><Link href="/contact">Contact</Link></li>
                 </ul>
 
                 <div className="flex items-center gap-x-5 lg:gap-x-10">

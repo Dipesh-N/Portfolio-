@@ -8,6 +8,7 @@ import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
 import firebase from './firebase.png';
 import figma from './figma.png';
+import react from './react.svg';
 import git from './git.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
@@ -35,8 +36,30 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import github from './github.svg';
+import mysql from './mysql.png';
+import java from './java.svg';
+import js from "./javascript.svg";
+import next from "./next.png";
+import laravel from "./laravel.svg";
+import c from "./c.png";
+import python from "./python.png";
+import tailwind from "./tailwind.svg";
+import css from "./CSS.png";
+
 
 export const assets = {
+    css,
+    tailwind,
+    c,
+    python,
+    laravel,
+    java,
+    js,
+    next,
+    mysql,
+    github, 
+    react,
     user_image,
     code_icon,
     code_icon_dark,
@@ -112,6 +135,27 @@ export const infoList = [
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
-export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
-];
+
+
+export const skilldata = [
+    {icon: assets.java, title : 'Java'},
+    {icon : assets.c, title : "C"},
+    {icon : assets.python, title : "Python"},
+    {icon: assets.js, title : 'Java Script'},
+    {icon: assets.css, title : 'CSS'},
+
+    {icon: assets.vscode, title : 'VS Code'},
+    {icon: assets.github, title : 'Git Hub'},
+    {icon: assets.tailwind, title : 'Tailwind CSS'},
+    
+    {icon: assets.git, title : 'Git'},
+    {icon: assets.next, title : 'Next JS'},
+    {icon: assets.react, title : "React"},
+    {icon : assets.laravel, title : "Laravel"},
+    {icon : assets.mysql, title : "MySQL"},
+    
+    
+
+
+
+]

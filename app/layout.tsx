@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
-const outfit = Outfit({ 
+const outfit = Outfit({
   subsets: ["latin"], weight : ["400", "500", "600", "700"],
   variable: "--font-outfit"
 });
 
-const ovo = Ovo({ 
+const ovo = Ovo({
   subsets: ["latin"], weight : ["400"],
   variable: "--font-ovo"
 });
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${ovo.variable} antialiased`}
       >
-        {children}
+        <Navbar />
+        <main className="pt-32">
+          {children}
+        </main>
       </body>
     </html>
   );
