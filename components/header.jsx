@@ -5,7 +5,7 @@ import Image from "next/image";
 const Header = () => {
   return (
     
-    <section className='py-20 md:py-28 px-4 flex flex-col items-center text-center gap-6'>
+    <section className=' pb-16 px-4 flex flex-col items-center text-center gap-6'>
       
     
       <div className='mb-2'>

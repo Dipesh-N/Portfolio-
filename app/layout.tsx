@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${outfit.variable} ${ovo.variable} antialiased`}
       >
         <Navbar />
-        <main className="pt-32">
+        <main className="pt-20">
           {children}
         </main>
       </body>

@@ -6,6 +6,8 @@ import { assets } from '../assets/assets';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
     useEffect(() => {
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
@@ -16,6 +18,22 @@ const Navbar = () => {
             document.body.style.overflow = 'auto';
         };
     }, [isMenuOpen]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
 
     const handleLinkClick = () => {
@@ -28,20 +46,11 @@ const Navbar = () => {
                 <Image src={assets.header_bg_color} alt="" className='w-full' priority />
             </div>
 
-            {/* Main Navigation Bar */}
-            <nav className="fixed top-0 left-0 right-0 ml-5 mr-5 md:mr-20 mt-10 justify-between flex items-center z-30">
+            {/* Top Navigation Bar (Logo and Controls) */}
+            <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between z-30 px-8 md:px-12 lg:px-24 py-3 transition-colors duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
                 <Link href="/">
-                    <Image src={assets.logo} alt='logo image' className="w-28 cursor-pointer mr-10" />
+                    <Image src={assets.logo} alt='logo image' className="w-28 cursor-pointer" />
                 </Link>
-
-                {/* Desktop Menu */}
-                <ul className="hidden md:flex items-center gap-6 rounded-full px-5 py-4 bg-white shadow-sm bg-opacity-80 backdrop-blur-sm">
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About</Link></li>
-                    <li><Link href="/services">Skills</Link></li>
-                    <li><Link href="/work">Project</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
-                </ul>
 
                 <div className="flex items-center gap-x-5 lg:gap-x-10">
                     <Image src={assets.moon_icon} alt="Theme toggle" className='w-6 cursor-pointer' />
@@ -55,6 +64,17 @@ const Navbar = () => {
                     </button>
                 </div>
             </nav>
+
+            {/* Bottom Navigation Menu (Desktop) */}
+            <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-30">
+                <ul className="hidden md:flex items-center gap-6 rounded-full px-5 py-4 bg-white shadow-sm bg-opacity-80 backdrop-blur-sm">
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/about">About</Link></li>
+                    <li><Link href="/skills">Skills</Link></li>
+                    <li><Link href="/porject">Project</Link></li>
+                    <li><Link href="/contact">Contact</Link></li>
+                </ul>
+            </div>
 
             {/* --- Mobile Sidebar Section --- */}
 
