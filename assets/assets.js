@@ -18,7 +18,7 @@ import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
 import download_icon from './download-icon.png';
-import hand_icon from './hand-icon.png';
+import hand_icon from './hand-icon.svg';
 import header_bg_color from './header-bg-color.png';
 import moon_icon from './moon_icon.png';
 import sun_icon from './sun_icon.png';
@@ -46,9 +46,15 @@ import c from "./c.png";
 import python from "./python.png";
 import tailwind from "./tailwind.svg";
 import css from "./CSS.png";
+import atm from "./atm.png";
+import tenzies from "./tenzies.png";
+import back from "./back.png";
 
 
 export const assets = {
+    back,
+    tenzies,
+    atm,
     css,
     tailwind,
     c,
@@ -122,18 +128,6 @@ export const workData = [
     },
 ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
-
-export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
-];
 
 
 
@@ -153,9 +147,24 @@ export const skilldata = [
     {icon: assets.react, title : "React"},
     {icon : assets.laravel, title : "Laravel"},
     {icon : assets.mysql, title : "MySQL"},
+]
+
+export const projectsData = [
+    {
+        icon : assets.user_image, title : "Auction Website - Buy My", description : " A full-stack web application simulating a real-time online auction marketplace. Users can register, list their own products, browse items, and place bids on others’ listings. The platform includes live updates and real-time notifications for bidding activity.",
+        techUsed : ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript"]
+    },
+       
+    {
+        icon : assets.atm, title : "Bank Mamagement System", description : "A desktop application built with Java that simulates the core functionalities of an ATM. The system allows users to manage their bank accounts, perform transactions like deposits and withdrawals, check balances, and change PINs, with all data managed by a MySQL database.",
+        techUsed : ["Java", "MySQL", "Java Swing", "JDBC"]
+    },
+
+    {
+        icon : assets.tenzies, title : "Tenzies Game", description : " A dice game built with React where the goal is to make all ten dice match. Players roll and click to freeze dice at their current value, trying to win in the fewest rolls possible.",
+        techUsed : ["React", "JavaScript", "CSS"]
+    },
     
-    
 
-
-
+   
 ]

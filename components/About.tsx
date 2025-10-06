@@ -1,4 +1,4 @@
-'use client'
+ç'use client'
 import React from 'react'
 
 import Image from "next/image"
@@ -31,9 +31,9 @@ const About = () => {
                     className="flex-1 text-center lg:text-left max-w-lg"
                 >
                     <p className="text-base md:text-lg text-gray-70 leading-relaxed">
-                        I'm a fourth-year student on a journey to create beautiful,
+                        I&apos;m a fourth-year student on a journey to create beautiful,
                         high-performance web experiences. My passion for technology
-                        started with a simple "Hello, World!" and has grown into a deep
+                        started with a simple &quot;Hello, World!&quot; and has grown into a deep
                         love for building elegant solutions to complex problems.
                     </p>
                 </motion.div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { assets } from "@/assets/assets";
 
 const outfit = Outfit({
   subsets: ["latin"], weight : ["400", "500", "600", "700"],
@@ -28,6 +29,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${outfit.variable} ${ovo.variable} antialiased`}
+        style={{
+          backgroundImage: `url(${assets.back.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+        }}
       >
         <Navbar />
         <main className="pt-20">
